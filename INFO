@@ -1,0 +1,16 @@
+Compile:
+
+g++ -I./include main.cpp SDLMain.m SDL_Init.cpp Button.cpp PopUp.cpp PopupScreens.cpp SmallButton.cpp Splash.cpp -framework SDL -framework SDL_image -framework SDL_ttf -framework SDL_mixer -framework Cocoa -w -g -O3 -o Jeopardy
+
+Finding memory leaks:
+
+iprofiler -leaks -d /[path to save log file] [program name]
+
+
+Using GDB:
+
+List source code of file PopUp.cpp
+list 'PopUp::init'
+
+Set Breakpoint to Function init()
+break 'PopUp::init'
