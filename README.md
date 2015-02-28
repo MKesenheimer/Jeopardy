@@ -13,11 +13,19 @@ Wichtige Startpunkte sind hier:
 - die Library "Cocoa" wird für die graphische Benutzeroberfläche von Mac OSX gebraucht
 
 Im Terminal
+
 $ make
+
 eintippen kompiliert das Programm.
+
 Mit
+
 $ make clean
+
 werden die erzeugten Objekte und das Programm gelöscht.
+
 Tippt man
+
 $ make do
+
 ein, wird das Programm kompiliert und anschließend ausgeführt.
