@@ -42,10 +42,10 @@ INCLUDE = $(wildcard *.h $(UINCLUDE)/*.h)
 
 
 # Libraries
-LIB = 
+LIB = -framework Cocoa
 
 # Frameworks
-FRM = -framework SDL -framework SDL_image -framework SDL_ttf -framework SDL_mixer -framework Cocoa
+FRM = -framework SDL -framework SDL_image -framework SDL_ttf -framework SDL_mixer
 
 ########################################################################
 ## Linker files
@@ -65,6 +65,9 @@ Jeopardy: $(BUILD)
 
 clean:
 	rm -f build/*.o Jeopardy
+
+do:
+	make && ./Jeopardy
 
 ########################################################################
 #                       -*- End of Makefile -*-                        #
