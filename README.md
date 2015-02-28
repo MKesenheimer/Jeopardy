@@ -29,3 +29,7 @@ Tippt man
 $ make do
 
 ein, wird das Programm kompiliert und anschließend ausgeführt.
+
+## Steuerung
+Die Felder werden mit der Maus ausgewählt und mit der linken Maustaste aufgedeckt. Ein Rechtsklick auf das Fragenfeld deckt die Antwort auf und ein erneuter Linksklick schließt das Antwortfeld wieder. Punkte können den mitspielenden Gruppen in der Ecke links unten vergeben werden. Mit den Tasten +10 und -10 kann der Punktestand um jeweils zehn Punkte erhöht bzw. erniedrigt werden.
+Der Vollbildmodus wird mit ESC beendet.
