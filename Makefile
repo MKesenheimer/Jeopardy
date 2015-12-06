@@ -28,10 +28,11 @@ PARENTDIR  = $(WORKINGDIR)/..
 vpath %.cpp $(WORKINGDIR)
 vpath %.o $(WORKINGDIR)/build
 UINCLUDE = $(WORKINGDIR)/include
+FINCLUDE = /Library/Frameworks/
 
 ########################################################################
 ## Includes
-CXX  = $(COMPILER) $(FLAGS) $(OPT) $(WARN) $(DEBUG) $(PREPRO) -I$(UINCLUDE)
+CXX  = $(COMPILER) $(FLAGS) $(OPT) $(WARN) $(DEBUG) $(PREPRO) -I$(UINCLUDE) -F$(FINCLUDE)
 INCLUDE = $(wildcard *.h $(UINCLUDE)/*.h)
 
 %.o: %.cpp $(INCLUDE)
@@ -42,10 +43,10 @@ INCLUDE = $(wildcard *.h $(UINCLUDE)/*.h)
 
 
 # Libraries
-LIB = -framework Cocoa
+LIB = 
 
 # Frameworks
-FRM = -framework SDL -framework SDL_image -framework SDL_ttf -framework SDL_mixer
+FRM = -framework SDL -framework SDL_image -framework SDL_ttf -framework SDL_mixer -framework Cocoa
 
 ########################################################################
 ## Linker files
@@ -61,7 +62,7 @@ USER = main.o SDLMain.o SDL_Init.o Button.o PopUp.o PopupScreens.o SmallButton.o
 BUILD = $(USER)
 
 Jeopardy: $(BUILD)
-	  $(CXX) $(patsubst %,build/%,$(BUILD)) $(LDFLAGS) $(LIB) $(FRM) -o $@
+	  $(CXX) $(patsubst %,build/%,$(BUILD)) $(LDFLAGS) $(LIB) $(FRMP) $(FRM) -o $@
 
 clean:
 	rm -f build/*.o Jeopardy
